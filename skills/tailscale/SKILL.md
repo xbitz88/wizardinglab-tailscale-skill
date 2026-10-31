@@ -1,5 +1,7 @@
 ---
-name: tailscale
+id: wizardinglab.tailscale
+name: WizardingLab Tailscale Mesh Networking
+version: 1.0.0
 description: >-
   Guide for installing, configuring, and managing Tailscale, headscale, and the
   Tailscale product family. Covers core mesh VPN (exit nodes, subnet routers,
@@ -13,7 +15,51 @@ description: >-
   Kubernetes operator, CI/CD runners, device management, session recording,
   audit logging, LLM API access, AI cost control, file sharing, exposing
   internal services, or writing a Go program that joins a tailnet as its own
-  device — even when they describe the scenario without naming the product.
+  device.
+triggers:
+  - tailscale
+  - headscale
+  - tailnet
+  - mesh vpn
+  - tailscale mesh
+  - tailscale acl
+  - tailscale exit node
+  - tailscale subnet router
+  - tailscale ssh
+  - tailscale serve
+  - tailscale funnel
+  - tailscale status
+  - magicdns
+  - tsnet
+  - aperture
+  - taildrop
+capabilities:
+  required: []
+  optional:
+    - shell
+    - network
+platforms:
+  - linux
+  - macos
+  - windows
+  - proxmox
+agents:
+  include: []
+  exclude: []
+execution:
+  mode: instructional
+  executable_tools_enabled: false
+risk:
+  level: medium
+  destructive_actions:
+    - service restart
+    - network routing changes
+    - acl changes
+source:
+  type: github
+  repository: https://github.com/xbitz88/wizardinglab-tailscale-skill
+  commit: 0463ee3ce5400277259db4b83f07a229a437e402
+  location: skills/tailscale
 ---
 
 # Tailscale
